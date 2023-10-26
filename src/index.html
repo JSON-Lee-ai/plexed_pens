@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles/style.css">
+        
+    </head>
+    <body>
+        <!-- Curtain Section -->
+        <section class="section-container-100" id="curtain">
+            <div class="curtain-body"></div>
+            <nav id="slide">
+                <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+                    <img class="image" src="https://images.unsplash.com/photo-1524781289445-ddf8f5695861?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
+                    <img class="image" src="https://images.unsplash.com/photo-1610194352361-4c81a6a8967e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" draggable="false" />
+                    <img class="image" src="https://images.unsplash.com/photo-1618202133208-2907bebba9e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
+                    <img class="image" src="https://images.unsplash.com/photo-1495805442109-bf1cf975750b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
+                    <img class="image" src="https://images.unsplash.com/photo-1548021682-1720ed403a5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
+                    <img class="image" src="https://images.unsplash.com/photo-1496753480864-3e588e0269b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2134&q=80" draggable="false" />
+                    <img class="image" src="https://images.unsplash.com/photo-1613346945084-35cccc812dd5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1759&q=80" draggable="false" />
+                    <img class="image" src="https://images.unsplash.com/photo-1516681100942-77d8e7f9dd97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
+                </div>
+            </nav>
+            <button id="nav-toggle" type="button" onclick="toggleNav()">
+                <i class="open fa-light fa-bars-staggered"></i>
+                <i class="close fa-light fa-xmark-large"></i>
+            </button>
+        </section>
+        <!-- Revenue Section -->
+        <section class="section-container-80">
+            <div id="app">
+                <div id="prize">
+                    <div id="prize-lines" class="prize-filter"></div>
+                    <div id="prize-shadow" class="prize-filter"></div>
+                    <h2 id="prize-label">
+                        <span class="asterisk">*</span>
+                        <span>YOUR NEW REVENUE</span>
+                        <span class="asterisk">*</span>      
+                    </h2>
+                    <h1 id="prize-text"></h1>
+                </div>
+                
+                <div id="shapes"></div>
+            </div>
+        </section>
+        <script src="scripts/curtain.js"></script>
+        <script src="scripts/slide_track.js"></script>
+        <script src="scripts/money_roll.js"></script>
+    
+    </body>
+</html>
+

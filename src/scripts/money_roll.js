@@ -71,13 +71,6 @@ const animate = () => {
     track.style.translate = `0rem ${activeDigit * -10}rem`;
   });
 }
-
-window.onload = () => {
-  setup();
-  
-  setTimeout(animate);  
-};
-
 const updateTheme = theme => {
   document.documentElement.style.setProperty("--theme-rgb", `var(--${theme})`);
   
@@ -87,3 +80,32 @@ const updateTheme = theme => {
 }
 
 updateTheme("sand");
+
+function loadAnimation() {
+  const animationPlaceholder = document.getElementById("app");
+
+  const options = {
+    root: null, // Use the viewport as the root
+    rootMargin: "0px", // No margin around the viewport
+    threshold: 0.5, // When 50% of the element is in view, trigger the callback
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Trigger the animation when the element is in view
+        animate();
+        observer.unobserve(entry.target); // Stop observing once it's in view
+      }
+    });
+  }, options);
+
+  observer.observe(animationPlaceholder);
+}
+
+window.onload = () => {
+  setup();
+  
+  // Call the function to set up the animation trigger
+  loadAnimation();
+};
