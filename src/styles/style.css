@@ -218,9 +218,7 @@ button {
 .section-container-100[data-nav="true"] > .curtain-body {
   transform: translateY(-65%);
 }
-.section-container-100[data-nav="true"] > #slide > #image-track{
-  transform: translate(0%, -50%); 
-}
+
 
 nav {
   height: 70vh;
@@ -291,6 +289,7 @@ nav {
   transform: translate(-50%, -50%) scale(1);
 }
 /* Slide track */
+
 #image-track {
   display: flex;
   gap: 4vmin;
@@ -306,4 +305,8 @@ nav {
   height: 56vmin;
   object-fit: cover;
   object-position: 100% center;
+}
+
+.section-container-100[data-nav="true"] > #slide > #image-track{
+  transform: translate(0%, -50%); 
 }
